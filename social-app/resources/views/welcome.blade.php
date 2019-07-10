@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Cosa Amici | Welcome to the Family</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -48,9 +48,10 @@
 
             .content {
                 text-align: center;
-                background-color: rgba(240, 240, 240, 0.3);
+                background-color: rgba(240, 240, 240, 0.7);
                 padding: 4rem;
                 width: 60%;
+                box-shadow: 3px 3px 20px 7px #222;
             }
 
             .title {
@@ -72,6 +73,27 @@
                 letter-spacing: .1rem;
                 text-decoration: none;
                 text-transform: uppercase;
+            }
+
+            .buttons {
+                margin-top: 2rem;
+            }
+
+            .btn {
+                text-decoration: none;
+                background-color: #ddd;
+                padding: 1rem;
+                border: 1px solid #111;
+                border-radius: 6px;
+                font-weight: 900;
+                color: #111;
+                margin: 0 1rem;
+                box-shadow: 0 2px 7px #444;
+            }
+
+            .register {
+                background-color: #990000;
+                color: #eee;
             }
 
             .m-b-md {
@@ -101,6 +123,17 @@
                 </div>
                 <div class="subtitle">
                     <p>Get organized<br>Get real</p>
+                </div>
+                <div class="buttons">
+                    @auth
+                        <a href="{{ url('/home') }}" class="btn">Dashboard</a>
+                    @else
+                        <a href="{{ route('login') }}" class="btn">Login</a>
+
+                        @if (Route::has('register'))
+                            <a href="{{ route('register') }}" class="btn register">Register</a>
+                        @endif
+                    @endauth
                 </div>
             </div>
         </div>
