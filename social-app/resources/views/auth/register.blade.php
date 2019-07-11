@@ -2,6 +2,9 @@
 
 @section('content')
 <div class="container">
+    <div class="img-container">
+        <img src="{{ URL::asset('/images/register-bg.jpg') }}" alt="Background Image" class="bg-image">
+    </div>
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -37,6 +40,17 @@
                                     </span>
                                 @enderror
                             </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-form-label offset-3"><input type="radio" name="family" value="new" required> Create New Family</label>
+                            <input type="text" class="form-control col-md-4 offset-1" name="family-name">
+                        </div>
+
+                        <p class="offset-4">- OR -</p>
+
+                        <div class="form-group row">
+                            <label class="col-form-label offset-3"><input type="radio" name="family" value="join" checked required> Become an Associative</label>
                         </div>
 
                         <div class="form-group row">

@@ -52,6 +52,7 @@
                 padding: 4rem;
                 width: 60%;
                 box-shadow: 3px 3px 20px 7px #222;
+                border-radius: 3px;
             }
 
             .title {

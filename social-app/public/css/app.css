@@ -10644,3 +10644,20 @@ a.text-dark:focus {
   }
 }
 
+.img-container {
+  width: 100vw;
+  overflow: hidden;
+}
+
+.img-container .bg-image {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  filter: grayscale(70%);
+  -webkit-filter: grayscale(70%);
+}
+

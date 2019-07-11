@@ -6,3 +6,20 @@
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+// Background Image
+.img-container {
+    width: 100vw;
+    overflow: hidden;
+
+    .bg-image {
+        width: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        filter: grayscale(70%);
+        -webkit-filter: grayscale(70%);
+    }
+}
